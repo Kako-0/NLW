@@ -14,3 +14,17 @@
     animation-duration: .8s;
     animation-fill-mode: backwards;
 }
+
+@keyframes right{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+.animate_right{
+    animation-name: right;
+    animation-duration: .8s;
+}
