@@ -1,6 +1,11 @@
 #page-orfanato{
     display: flex;
     min-height: 100vh;
+    color: #5c8599;
+}
+
+main{
+    flex: 1;
 }
 
 aside.sidebar{
@@ -13,4 +18,192 @@ aside.sidebar{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+aside.sidebar footer button{
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: #12afcb;
+    border-radius: 1rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background-color .4s;
+}
+aside.sidebar footer button:hover{
+    background: #17d6eb;
+}
+
+.with-sidebar{
+    padding-left: 110px;
+}
+
+.orfanato-detalhes{
+    width: 700px;
+    margin: 4rem auto;
+    background: white;
+    border: 1px solid #d3e2e5;
+    border-radius: 1.2rem;
+
+    overflow: hidden;
+}
+
+.orfanato-detalhes > img{
+    width: 100%;
+    height: 19rem;
+    object-fit: cover;
+    
+}
+
+.imagens{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: 1rem;
+    margin: 16px 40px 0px;
+}
+
+.imagens button{
+    border: 0px;
+    background: none;
+
+    height: 5.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+
+    overflow: hidden;
+    opacity: .7;
+}
+.imagens button:hover, .imagens button.active{
+    opacity: 1;
+}
+
+.imagens button img{
+    width: 100%;
+    height: 5.5rem;
+    object-fit: cover;
+}
+
+.orfanato-detalhes-content{
+    padding: 3rem;
+}
+
+.orfanato-detalhes-content h1{
+    font-size: 3.4rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.orfanato-detalhes-content p{
+    font-size: 18px;
+    line-height: 1.8 ;
+    margin-top: 1.5rem;
+}
+
+.mapa-container{
+    margin-top: 3.4rem;
+    background: #e6f7fb;
+    border: 1px solid #b3dae2;
+    border-radius: 1rem;
+}
+
+#mapid{
+    width: 100%;
+    height: 17.5rem;
+}
+
+.mapa-container footer{
+    padding: 1rem 0;
+    text-align: center;
+
+}
+
+.mapa-container footer a{
+    color: #0089A5 ;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.mapa-container .leaflet-container{
+    border-bottom: 1px solid #dde3f0;
+    border-radius: 1rem;
+}
+
+.orfanato-detalhes-content hr{
+    width: 100%;
+    height: 1px;
+
+    border: 0;
+
+    background: #d3e2e6;
+    margin: 3.4rem 0;
+}
+
+.orfanato-detalhes-content h2{
+    font-size: 2.3rem;
+    line-height: 1rem;
+
+}
+
+.abrir-detalhes{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abrir-detalhes div{
+    padding: 2rem 1.5rem;
+    font-size: 26px;
+    margin: 1rem;
+}
+
+.abrir-detalhes img{
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.abrir-detalhes .horario{
+    background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
+    border: 1px solid #B3DAE2;
+    border-radius: 20px;
+}
+
+.abrir-detalhes .fim-de-semana{
+    background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
+    /* Green Low */
+    border: 1px solid #A1E9C5;
+    border-radius: 20px;
+    color: #37C77F;
+}
+
+.botao-primario{
+    margin-top: 4rem;
+
+    width: 100%;
+    height: 4rem;
+    border: 0;
+    border-radius: 1rem;
+    color: white;
+
+    cursor: pointer;
+    
+    background: #3cdc8c;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background .4s;
+}
+
+.botao-primario:hover{
+    background: #36cf82;
+}
+.botao-primario img{
+    margin-right: 1rem;
 }
