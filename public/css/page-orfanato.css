@@ -1,107 +1,16 @@
 #page-orfanato{
-    width: 100%;
-    height: 100%;
     display: flex;
-   
-    font-size: initial;
+    min-height: 100vh;
 }
 
-aside{
-    width: clamp(20rem, 25vw, 44rem);
-    background: linear-gradient(329.54deg, #15b6d6 0%, #15d6d6 100%);
-    padding: clamp(3rem, 5vw, 8rem);
+aside.sidebar{
+    position: fixed;
+    height: 100%;
+    padding: 32px 24px;
+    background: #15c3d6;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-aside h1{
-    margin-top: 4rem;
-    font: 800 clamp(2rem, 1.8vw, 3.6rem)/1.1 'Nunito', sans-serif;
-}
-
-aside p{
-    margin-top: 1.4rem;
-    font: 400 1.1rem/1.1 'Nunito', sans-serif;
-}
-
-aside footer{
-    margin-top: .8rem;
-}
-
-aside footer p{
-    margin-top: .4rem;
-}
-
-#mapid{
-    width: 100%;
-    height: 100%;
-}
-
-a.criarOrfanato{
-    position: absolute;
-    right: 2rem;
-    bottom: 2rem;
-    z-index: 10;
-    
-    width: 3.4rem;
-    height: 3.4rem;
-    background: #15c3d6;
-    border: 0;
-    border-radius: 1.2rem;
-
-    display: flex;
     align-items: center;
-    justify-content: center;
-
-    transition: background .4s;
-}
-
-a.criarOrfanato:hover{
-    background: #17D3EB;
-}
-
-.leaflet-popup-content-wrapper{
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 20px;
-}
-
-.leaflet-popup-content{
-    color: #0089A5;
-    
-    margin: .8rem 1.2rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.leaflet-popup-content a{
-    width: 2rem;
-    height: 2rem;
-    background: #15c3D6;
-    box-shadow: 17.2828px 27.65 41.48 rgba(23, 142, 166, 0.16);
-    border-radius: 12px;
-
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background color .2s;
-}
-
-.leaflet-popup-content a:hover{
-    background: #17D6EB;
-}
-
-.leaflet-popup-tip{
-    display: none;
-}
-
-.leaflet-container{
-    font: 600 1.4rem/1 'Nunito', sans-serif;
-
-    z-index: 5;
 }

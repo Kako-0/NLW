@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Localize um orfanato | Happy</title>
+    <title>Teste | Happy</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -23,21 +23,78 @@
 </head>
 <body>
     <div id="page-orfanato">
-        <aside class="animate_right">
-            <header>
-                <img src="./public/imagens/Local.svg" alt="Logo Happy">
-                <h1>Escolha um orfanato no mapa</h1>
-                <p>Muitas crianças estão esperando a sua visita :)</p>
-            </header>
+        <aside class="animate_right sidebar">
+            <img src="./public/imagens/Local.svg" alt="Happy">
             <footer>
-                <strong>São Luís</strong>
-                <p>Maranhão</p>
+                <button onclick="history.back()">
+                    <img src="./public/imagens/Arrow-back.svg" alt="voltar">
+                </button>
             </footer>
         </aside>
-        <div id="mapid" class="animate_appear"></div>
-        <a href="criarOrfanato.html" class="criarOrfanato" title="cadastre um orfanato">
-            <img src="./public/imagens/Adicionar.svg" alt="adicionar um orfanato">
-        </a>
+        <main class="animate_appear">
+            <div class="orfanato-detalhes">
+                <img src="./public/imagens/home.png" alt="Teste">
+            </div>
+            <div class="imagens">
+                <button class="active" type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+                <button type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+                <button type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+                <button type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+                <button type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+                <button type="button">
+                    <img src="./public/imagens/home.png" alt="Teste">
+                </button>
+            </div>
+
+            <div class="orfanato-detalhes-content">
+                <h1>Teste</h1>
+                <p>
+                    Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.
+                </p>
+                
+                <div class="mapa-container">
+                    <div id="mapid"></div>
+                </div>
+
+                <footer>
+                    <a href="">Ver rotas no Google Maps</a>
+                </footer>
+
+                <hr>
+
+                <h2>Instruções para visita</h2>
+                <p>
+                    Venha como se sentir a vontade e traga muito amor e paciência para dar.
+                </p>
+
+                <div class="abrir-detalhes">
+                    <div class="horario">
+                        <img src="./public/imagens/Clock.svg" alt="horario">
+                        horário de visita Das 18h até 8h
+                    </div>
+                    <div class="fim-de-semana">
+                        <img src="./public/imagens/Alerta.svg" alt="info">
+                        Atendemos fim de semana
+                    </div>
+
+                    <button class="botao-primario" type="button">
+                        <img src="./public/imagens/Whatsapp.svg" alt="Whatsapp">
+                        Entra em contato
+                    </button>
+                </div>
+
+            </div>
+        </main>
     </div>
 
     <script src="./public/scripts/pageOrfanato.js"></script>
