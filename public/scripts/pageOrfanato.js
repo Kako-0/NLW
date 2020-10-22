@@ -20,3 +20,21 @@ const icon = L.icon({
 
 //Add um popup
 L.marker([-2.5362386,-44.2849537], { icon }).addTo(map)
+
+function selectImage(event){
+    const button = event.currentTarget;
+
+    const buttons = document.querySelectorAll(".imagens button");
+    buttons.forEach(removeActive);
+
+    function removeActive(button){
+        button.classList.remove("active");
+    }
+
+    const image = button.children[0];
+    const imgContainer = document.querySelector(".orfanato-detalhes > img");
+
+    imgContainer.src = image.src;
+    
+    button.classList.add("active");
+}
