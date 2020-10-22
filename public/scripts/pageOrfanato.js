@@ -22,19 +22,24 @@ const icon = L.icon({
 L.marker([-2.5362386,-44.2849537], { icon }).addTo(map)
 
 function selectImage(event){
-    const button = event.currentTarget;
+    //Seleciona o botão clickado por último
+    const buttonAtual = event.currentTarget;
 
-    const buttons = document.querySelectorAll(".imagens button");
-    buttons.forEach(removeActive);
+    //Seleciona todos os selectors q se chamam ".imagens button"
+    // e remove a classe Active de cada um
+    const buttons = document.querySelectorAll(".imagens button").forEach(removeActive);
 
     function removeActive(button){
         button.classList.remove("active");
     }
-
-    const image = button.children[0];
+    
+    //A var image possui o filho(a imagem) do botão clickado por último
+    const image = buttonAtual.children[0];
+    //Seleciona a primeira imagem
     const imgContainer = document.querySelector(".orfanato-detalhes > img");
-
+    //A var imgContainer passa a ter como src a imagem do botão clickado
     imgContainer.src = image.src;
     
+    //Adiciona a classe active no botão
     button.classList.add("active");
 }
