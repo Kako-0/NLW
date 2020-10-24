@@ -8,40 +8,6 @@ main{
     flex: 1;
 }
 
-aside.sidebar{
-    position: fixed;
-    height: 100%;
-    padding: 32px 24px;
-    background: #15c3d6;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-aside.sidebar footer button{
-    width: 48px;
-    height: 48px;
-    border: none;
-    background: #12afcb;
-    border-radius: 1rem;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background-color .4s;
-}
-aside.sidebar footer button:hover{
-    background: #17d6eb;
-}
-
-.with-sidebar{
-    padding-left: 110px;
-}
-
 .orfanato-detalhes{
     width: 700px;
     margin: 4rem auto;
@@ -103,35 +69,6 @@ aside.sidebar footer button:hover{
     margin-top: 1.5rem;
 }
 
-.mapa-container{
-    margin-top: 3.4rem;
-    background: #e6f7fb;
-    border: 1px solid #b3dae2;
-    border-radius: 1rem;
-}
-
-#mapid{
-    width: 100%;
-    height: 17.5rem;
-}
-
-.mapa-container footer{
-    padding: 1rem 0;
-    text-align: center;
-
-}
-
-.mapa-container footer a{
-    color: #0089A5 ;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-}
-
-.mapa-container .leaflet-container{
-    border-bottom: 1px solid #dde3f0;
-    border-radius: 1rem;
-}
 
 .orfanato-detalhes-content hr{
     width: 100%;

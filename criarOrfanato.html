@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./public/css/main.css">
     <link rel="stylesheet" href="./public/css/animations.css">
     <link rel="stylesheet" href="./public/css/page-criarOrfanato.css">
+    <link rel="stylesheet" href="./public/css/sidebar.css">
+    <link rel="stylesheet" href="./public/css/map.css">
     
 </head>
 <body>
@@ -33,7 +35,38 @@
         </aside>
 
         <main class="animate_appear with-sidebar">
+            <form action="">
+                <fieldset>
+                    <legend>Dados</legend>
+                    <div class="map-container">
+                        <div class="mapid"></div>
+                        <footer>
+                            <a href="#" id="selectPoint">
+                                Clique no mapa para adicionar a localização
+                            </a>
+                        </footer>
+                    </div>
 
+                    <div class="inputBloco">
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome">
+                    </div>
+
+                    <div class="inputBloco">
+                        <label for="sobre">Sobre <span>Máximo de 300 caracteres</span> </label>
+                        <textarea id="sobre" name="sobre"></textarea>
+                    </div>
+
+                    <div class="inputBloco">
+                        <label for="whatsapp">Número de Whatsapp</label>
+                        <input id="whatsapp" name="whatsapp">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Visitação</legend>
+                </fieldset>
+            </form>
         </main>
     </div>
 

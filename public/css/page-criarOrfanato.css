@@ -1,0 +1,93 @@
+#criar-orfanato{
+    display: flex;
+    min-width: 100vh;
+}
+
+main{
+    flex: 1;
+}
+
+.map-container{
+    margin: 0 0 2.5rem;
+}
+
+.map-container .leaflet-container{
+    border-radius: 20px 20px 0 0;
+}
+.map-container footer{
+    background: #f5f8fa;
+    border-radius: 0 0 20px 20px;
+}
+
+form{
+    width: 700px;
+    margin: 2.5rem auto;
+    background: white;
+    border: 1px solid #d3e2e5;
+    border-radius: 1rem;
+    padding: 2rem;
+
+    overflow: hidden;
+}
+
+fieldset{
+    border: 0;
+}
+
+fieldset + fieldset{
+    margin-top: 5rem;
+}
+
+fieldset legend{
+    width: 100%;
+
+    font-size: 3rem;
+    line-height: 1.5;
+
+    color: #5c8599;
+    font-weight: 700;
+
+    border-bottom: 1px solid #d3e2e5;
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+}
+
+.inputBloco + .inputBloco{
+    margin-top: 1.5rem;
+}
+
+.inputBloco label{
+    color: #8fa7b3;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+.inputBloco label span{
+    font-size: .8rem;
+    color: #8fa7b3;
+    margin-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.inputBloco input, .inputBloco textarea{
+    width: 100%;
+
+    background:#f5f8fa;
+    border: 1px solid #3de2e5;
+    border-radius: 1rem;
+
+    color: #5c8599;
+}
+
+.inputBloco input{
+    height: 4rem;
+    padding: 0 1rem;
+}
+
+.inputBloco textarea{
+    height: clamp(7.5rem, 10rem, 15rem);
+    resize: vertical;
+    padding: 1rem;
+    line-height: 1.8rem;
+    
+}
