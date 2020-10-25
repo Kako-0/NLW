@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./public/css/animations.css">
     <link rel="stylesheet" href="./public/css/page-criarOrfanato.css">
     <link rel="stylesheet" href="./public/css/sidebar.css">
+    <link rel="stylesheet" href="./public/css/botoes.css">
     <link rel="stylesheet" href="./public/css/map.css">
     
 </head>
@@ -38,7 +39,7 @@
             <form action="">
                 <fieldset>
                     <legend>Dados</legend>
-                    <div class="map-container">
+                    <div class="mapa-container">
                         <div class="mapid"></div>
                         <footer>
                             <a href="#" id="selectPoint">
@@ -49,22 +50,56 @@
 
                     <div class="inputBloco">
                         <label for="nome">Nome</label>
-                        <input id="nome" name="nome">
+                        <input id="nome" name="nome" required>
                     </div>
 
                     <div class="inputBloco">
                         <label for="sobre">Sobre <span>Máximo de 300 caracteres</span> </label>
-                        <textarea id="sobre" name="sobre"></textarea>
+                        <textarea id="sobre" name="sobre" required></textarea>
                     </div>
 
                     <div class="inputBloco">
                         <label for="whatsapp">Número de Whatsapp</label>
-                        <input id="whatsapp" name="whatsapp">
+                        <input id="whatsapp" name="whatsapp" required>
+                    </div>
+
+                    <div class="inputBloco imagens">
+                        <label for="imagens">Fotos</label>
+                        <div class="imagens-upload" id="imagens">
+                            <div class="novo-upload">
+                                <input name="imagens" placeholder="Cole o link da foto aqui" required>
+                                <span><img src="./public/imagens/remover.svg" alt="remover foto"></span>    
+                            </div>
+
+                        </div>
+                        <button type="button">
+                            <img src="./public/imagens/add-file.svg" alt="adicionar mais fotos">
+                        </button>
                     </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Visitação</legend>
+
+                    <div class="inputBloco">
+                        <label for="instrucoes">Instruções</label>
+                        <textarea id="instrucoes" name="instrucoes" required></textarea>
+                    </div>
+                    <div class="inputBloco">
+                        <label for="horario">Horário das visitas</label>
+                        <input id="horario" name="horario" required>
+                    </div>
+                    <div class="inputBloco">
+                        <label for="atende">Atende fim de semana?</label>
+                        <input type="hidden" id="atende" name="atende" value="1">
+                        <div class="opcoes">
+                            <button type="button" class="active">Sim</button>
+                            <button type="button">Não</button>
+                        </div>
+
+                        <button type="submit" class="botao-primario">Confirmar</button>
+                    </div>
+
                 </fieldset>
             </form>
         </main>
