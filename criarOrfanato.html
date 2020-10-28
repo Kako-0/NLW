@@ -95,8 +95,8 @@
                         <label for="atende">Atende fim de semana?</label>
                         <input type="hidden" id="atende" name="atende" value="1">
                         <div class="opcoes">
-                            <button type="button" class="active">Sim</button>
-                            <button type="button">Não</button>
+                            <button data-value="1" onclick="toggleSelect(event)" type="button" class="active">Sim</button>
+                            <button data-value="0" onclick="toggleSelect(event)" type="button">Não</button>
                         </div>
 
                         <button type="submit" class="botao-primario">Confirmar</button>

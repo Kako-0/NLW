@@ -25,7 +25,7 @@ map.on('click', (event) => {
     //adicionando um novo popup
     marker = L.marker([lat, lng], {icon}).addTo(map); 
 });
-
+//add fotos
 function addFoto(){
     const container = document.querySelector('#imagens');
 
@@ -40,7 +40,7 @@ function addFoto(){
 
     container.appendChild(newFieldContainer);
 }
-
+//remover fotos
 function removeFoto(event){
     const del = event.currentTarget;
     const fieldsContainer = document.querySelectorAll('.novo-upload');
@@ -50,8 +50,16 @@ function removeFoto(event){
         return;
     }
 
-    del.parentNode.remove();
+    del.parentNode.remove();    
+}
+//selecionar sim ou nao
+function toggleSelect(event) {
+    document.querySelectorAll('.opcoes button').forEach(button => button.classList.remove('active'));
 
+    const button = event.currentTarget;
+    button.classList.add('active');
 
-    
+    const input = document.querySelector('[name = "atende"]');
+
+    input.value = button.dataset.value;
 }
