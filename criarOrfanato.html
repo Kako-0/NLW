@@ -40,7 +40,9 @@
                 <fieldset>
                     <legend>Dados</legend>
                     <div class="mapa-container">
-                        <div class="mapid"></div>
+                        <div id="mapid"></div>
+                        <input type="hidden" name="lat">
+                        <input type="hidden" name="lng">
                         <footer>
                             <a href="#" id="selectPoint">
                                 Clique no mapa para adicionar a localização
@@ -68,11 +70,11 @@
                         <div class="imagens-upload" id="imagens">
                             <div class="novo-upload">
                                 <input name="imagens" placeholder="Cole o link da foto aqui" required>
-                                <span><img src="./public/imagens/remover.svg" alt="remover foto"></span>    
+                                <span onclick="removeFoto(event)" ><img src="./public/imagens/remover.svg" alt="remover foto"></span>    
                             </div>
-
                         </div>
-                        <button type="button">
+
+                        <button onclick="addFoto()" type="button">
                             <img src="./public/imagens/add-file.svg" alt="adicionar mais fotos">
                         </button>
                     </div>

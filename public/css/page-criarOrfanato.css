@@ -131,3 +131,7 @@ fieldset legend{
 
     cursor: pointer;
 }
+
+.novo-upload + .novo-upload{
+    margin-top: 1rem;
+}
