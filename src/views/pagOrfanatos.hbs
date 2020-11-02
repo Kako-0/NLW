@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localize um orfanato | Happy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <link rel="icon" href="/imagens/logo-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/page-orfanatos.css">
+    
+</head>
+<body>
+    <div id="page-orfanatos">
+        <aside class="animate_right">
+            <header>
+                <img src="/imagens/Local.svg" alt="Logo Happy">
+                <h1>Escolha um orfanato no mapa</h1>
+                <p>Muitas crianças estão esperando a sua visita :)</p>
+            </header>
+            <footer>
+                <strong>São Luís</strong>
+                <p>Maranhão</p>
+            </footer>
+        </aside>
+        <div id="mapid" class="animate_appear"></div>
+
+        {{#each orfanatos}}
+            <span
+                data-id="{{this.id}}"
+                data-name="{{this.name}}"
+                data-lat="{{this.lat}}"
+                data-lng="{{this.lng}}"
+            ></span>
+        {{/each}}
+
+        <a href="/criarOrfanato" class="criarOrfanato" title="cadastre um orfanato">
+            <img src="/imagens/Adicionar.svg" alt="adicionar um orfanato">
+        </a>
+    </div>
+
+    <script src="/scripts/pageOrfanatos.js"></script>
+
+</body>
+</html>

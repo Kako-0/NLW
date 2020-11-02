@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste | Happy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+
+    <link rel="icon" href="/imagens/logo-icon.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="/css/page-orfanato.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/botoes.css">
+    <link rel="stylesheet" href="/css/map.css">
+    
+</head>
+<body>
+    <div id="page-orfanato">
+        <aside class="animate_right sidebar">
+            <img src="/imagens/Local.svg" alt="Happy">
+            <footer>
+                <button onclick="history.back()">
+                    <img src="/imagens/Arrow-back.svg" alt="voltar">
+                </button>
+            </footer>
+        </aside>
+        <main class="animate_appear with-sidebar">
+            <div class="orfanato-detalhes">
+                <img src="/imagens/home.png" alt="Teste">
+            
+                <div class="imagens">
+                    <button onclick="selectImage(event)" class="active" type="button">
+                        <img src="https://source.unsplash.com/random?id=1" alt="Teste">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=2" alt="Teste">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=3" alt="Teste">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=4" alt="Teste">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=5" alt="Teste">
+                    </button>
+                    <button onclick="selectImage(event)" type="button">
+                        <img src="https://source.unsplash.com/random?id=6" alt="Teste">
+                    </button>
+                </div>
+            
+                <div class="orfanato-detalhes-content">
+                    <h1>Teste</h1>
+                    <p>
+                        Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.
+                    </p>
+                    
+                    <div class="mapa-container">
+                        <div id="mapid"></div>
+                    
+                        <footer>
+                            <a href="">Ver rotas no Google Maps</a>
+                        </footer>
+                    </div>
+
+                    <hr>
+
+                    <h2>Instruções para visita</h2>
+                    <p>
+                        Venha como se sentir a vontade e traga muito amor e paciência para dar.
+                    </p>
+
+                    <div class="abrir-detalhes">
+                        <div class="horario">
+                            <img src="/imagens/Clock.svg" alt="horario">
+                            Horário de visita Das 18h até 8h
+                        </div>
+                        <div class="fim-de-semana">
+                            <img src="/imagens/Alerta.svg" alt="info">
+                            Atendemos fim de semana
+                        </div>
+                    </div>
+
+                    <button class="botao-primario" type="button">
+                        <img src="/imagens/Whatsapp.svg" alt="Whatsapp">
+                        Entrar em contato
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/scripts/pageOrfanato.js"></script>
+
+</body>
+</html>
