@@ -36,15 +36,17 @@
         </aside>
         <div id="mapid" class="animate_appear"></div>
 
-        {{#each orfanatos}}
-            <span
-                data-id="{{this.id}}"
-                data-name="{{this.name}}"
-                data-lat="{{this.lat}}"
-                data-lng="{{this.lng}}"
-            ></span>
-        {{/each}}
-
+        <div class="orfanatos">
+            {{#each orfanatos}}
+                <span
+                    data-id="{{this.id}}"
+                    data-name="{{this.name}}"
+                    data-lat="{{this.lat}}"
+                    data-lng="{{this.lng}}"
+                ></span>
+            {{/each}}
+        </div>
+        
         <a href="/criarOrfanato" class="criarOrfanato" title="cadastre um orfanato">
             <img src="/imagens/Adicionar.svg" alt="adicionar um orfanato">
         </a>

@@ -23,3 +23,16 @@ function addMarker({id, name, lat, lng}) {
     L.marker([lat,lng], { icon }).addTo(map).bindPopup(popup);
 }
 
+//Pega todos os spans
+const spanOrfanatos = document.querySelectorAll('.orfanatos span');
+//Adiciona os dados de cada span
+spanOrfanatos.forEach(span =>{
+    const orfanato = {
+        id: span.dataset.id, 
+        name: span.dataset.name,
+        lat: span.dataset.lat,
+        lng: span.dataset.lng
+    }
+//Adiciona o popup no mapa
+    addMarker(orfanato)
+})
