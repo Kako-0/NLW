@@ -16,6 +16,8 @@
     justify-content: center;
 
     transition: background .4s;
+
+    text-decoration: none;
 }
 
 .botao-primario:hover{

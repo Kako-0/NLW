@@ -17,7 +17,7 @@ function addMarker({id, name, lat, lng}) {
         classname: "map-popup",
         minwidth: 240,
         minheigth: 240
-    }).setContent(`${name} <a href="/pagOrfanato?${id}" class="escolha-orfanato"> <img src="/imagens/Arrow-white.svg"> </a>`);
+    }).setContent(`${name} <a href="/pagOrfanato?id=${id}" class="escolha-orfanato"> <img src="/imagens/Arrow-white.svg"> </a>`);
 
     //Add um popup
     L.marker([lat,lng], { icon }).addTo(map).bindPopup(popup);

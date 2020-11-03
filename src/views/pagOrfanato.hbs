@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste | Happy</title>
+    <title>{{orfanato.name}} | Happy</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -36,65 +36,61 @@
         </aside>
         <main class="animate_appear with-sidebar">
             <div class="orfanato-detalhes">
-                <img src="/imagens/home.png" alt="Teste">
+                <img src="{{orfanato.firstImage}}" alt="{{orfanato.name}}">
             
                 <div class="imagens">
-                    <button onclick="selectImage(event)" class="active" type="button">
-                        <img src="https://source.unsplash.com/random?id=1" alt="Teste">
-                    </button>
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=2" alt="Teste">
-                    </button>
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=3" alt="Teste">
-                    </button>
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=4" alt="Teste">
-                    </button>
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=5" alt="Teste">
-                    </button>
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=6" alt="Teste">
-                    </button>
+                    {{#each orfanato.images}}
+                        <button onclick="selectImage(event)" class="active" type="button">
+                            <img src="{{this}}" alt="{{orfanato.name}}">
+                        </button>
+                   {{/each}}
+
                 </div>
             
                 <div class="orfanato-detalhes-content">
-                    <h1>Teste</h1>
-                    <p>
-                        Presta assistência a crianças de 06 a 15 anos que se encontre em situação de risco e/ou vulnerabilidade social.
-                    </p>
+                    <h1>{{orfanato.name}}</h1>
+                    <p>{{orfanato.about}}</p>
                     
                     <div class="mapa-container">
                         <div id="mapid"></div>
-                    
+                        <span 
+                            data-lat="{{orfanato.lat}}" 
+                            data-lng="{{orfanato.lng}}"
+                        ></span>
                         <footer>
-                            <a href="">Ver rotas no Google Maps</a>
+                            <a target="_blank" 
+                            href="https://maps.google.com/mobile?q={{orfanato.lat}},{{orfanato.lng}}&z=15">Ver rotas no Google Maps</a>
                         </footer>
                     </div>
 
                     <hr>
 
                     <h2>Instruções para visita</h2>
-                    <p>
-                        Venha como se sentir a vontade e traga muito amor e paciência para dar.
-                    </p>
+                    <p>{{orfanato.instructions}}</p>
 
                     <div class="abrir-detalhes">
                         <div class="horario">
                             <img src="/imagens/Clock.svg" alt="horario">
-                            Horário de visita Das 18h até 8h
+                            {{orfanato.opening_hours}}
                         </div>
-                        <div class="fim-de-semana">
-                            <img src="/imagens/Alerta.svg" alt="info">
-                            Atendemos fim de semana
-                        </div>
+
+                        {{#if orfanato.opening_on_weekends}}
+                            <div class="fim-de-semana open">   
+                                <img src="/imagens/Alerta.svg" alt="info">
+                                Atendemos fim de semana
+                            </div>
+                        {{else}}
+                            <div class="fim-de-semana closed">
+                                <img src="/imagens/alerta-red.svg" alt="info">
+                                Não atendemos fim de semana
+                            </div>
+                        {{/if}}
                     </div>
 
-                    <button class="botao-primario" type="button">
+                    <a  href="https://api.whatsapp.com/send?l=pt_Br&phone={{orfanato.whatsapp}}" class="botao-primario" type="button">
                         <img src="/imagens/Whatsapp.svg" alt="Whatsapp">
                         Entrar em contato
-                    </button>
+                    </a>
                 </div>
             </div>
         </main>
