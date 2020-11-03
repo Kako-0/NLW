@@ -1,4 +1,5 @@
 const Database = require('./dabase/db');
+const saveOrfanato = require('./dabase/saveOrfanato');
 const save = require('./dabase/saveOrfanato');
 
 module.exports = {
@@ -51,5 +52,34 @@ module.exports = {
     //retorna a pagina de criação de um orfanato no mapa
     criarOrfanato(request, response){
         return response.render('criarOrfanato');
+    },
+
+    async saveOrfanatos(request, response){
+        const fields = request.body;
+
+        if (Object.values(fields).includes('')) {
+            return response.send('Todos os campos devem ser preenchidos!');            
+        }
+
+        try {
+            const db = await Database;
+            await saveOrfanato(db, {
+                lat: fields.lat,
+                lng: fields.lng,
+                name: fields.nome,
+                about: fields.sobre,
+                whatsapp: fields.whatsapp,
+                images: fields.imagens.toString(),
+                instructions: fields.instrucoes,
+                opening_hours: fields.horario,
+                opening_on_weekends: fields.atende
+            });  
+            
+            return response.redirect('/pagOrfanatos')
+        } catch (error) {
+            console.log(error);
+            return response.send("Erro aqui");
+        }
+
     }
 }
