@@ -1,6 +1,5 @@
 const Database = require('./dabase/db');
 const saveOrfanato = require('./dabase/saveOrfanato');
-const save = require('./dabase/saveOrfanato');
 
 module.exports = {
     //retorna a landing page
