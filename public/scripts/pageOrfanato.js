@@ -6,7 +6,10 @@ const options = {
     zoomControl: false
 }
 
-const map = L.map('mapid', options).setView([-2.5362386,-44.2849537], 15);
+const spanLat = document.querySelector('span[data-lat]').dataset.lat;
+const spanLng = document.querySelector('span[data-lng]').dataset.lng;
+
+const map = L.map('mapid', options).setView([lat,lng], 15);
 
 //Add uma camada do mapa
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -19,7 +22,7 @@ const icon = L.icon({
 });
 
 //Add um popup
-L.marker([-2.5362386,-44.2849537], { icon }).addTo(map)
+L.marker([spanLat, spanLng], { icon }).addTo(map)
 
 function selectImage(event){
     //Seleciona o botão clickado por último
